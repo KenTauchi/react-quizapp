@@ -4,28 +4,28 @@ const quizDataSelector = (reducer) => reducer.QuizData;
 
 export const getIndex = createSelector(
   [quizDataSelector],
-  (QuizData) => QuizData.currentIndex
+  (quizData) => quizData.currentIndex
 );
 export const getLength = createSelector(
   [quizDataSelector],
-  (QuizData) => QuizData.quizLength
+  (quizData) => quizData.quizLength
 );
 export const getQuiz = createSelector(
   [quizDataSelector],
-  (QuizData) => QuizData.quizData.question
+  (quizData) => quizData.data.question
 );
 
 export const getQuizOption = createSelector(
   [quizDataSelector],
-  (QuizData) => QuizData.quizData.option
+  (quizData) => quizData.data.option
 );
 
 export const getAnswer = createSelector(
   [quizDataSelector],
-  (QuizData) => QuizData.quizData.answer
+  (quizData) => quizData.data.answer
 );
 
 export const getTitle = createSelector(
   [quizDataSelector],
-  (QuizData) => QuizData.title
+  (quizData) => quizData.title
 );

@@ -10,7 +10,7 @@ import createStore from "./reducks/store/store";
 import { ConnectedRouter } from "connected-react-router";
 import * as History from "history";
 
-const history = History.createBrowserHistory();
+export const history = History.createBrowserHistory();
 export const store = createStore(history);
 
 ReactDOM.render(

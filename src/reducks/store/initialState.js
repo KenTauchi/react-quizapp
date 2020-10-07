@@ -1,12 +1,16 @@
 const initialState = {
-  quizData: "",
-  quizLength: 0,
-  currentIndex: 0,
-  userAnswer: null,
-  quizEnd: false,
-  score: 0,
-  showNext: false,
-  title: "",
+  quizData: {
+    data: "",
+    quizLength: 0,
+    currentIndex: 0,
+    title: "",
+  },
+  userAct: {
+    correct: false,
+    showScore: false,
+    score: 0,
+    showNext: false,
+  },
 };
 
 export default initialState;

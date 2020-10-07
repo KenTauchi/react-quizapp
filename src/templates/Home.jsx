@@ -5,7 +5,7 @@ import { push } from "connected-react-router";
 
 import { QuizDataKen, QuizDataRina } from "../quizDataFile";
 import { quizImportAction, addTitle } from "../reducks/quizData/action";
-// import { quizDataImporter } from "../reducks/quizData/operations";
+import { resetStateAction } from "../reducks/resetState/action";
 
 export const dataToSend = (data, index) => {
   return {
@@ -24,6 +24,7 @@ function Home() {
       <h1>Please pick quiz</h1>
       <button
         onClick={() => {
+          dispatch(resetStateAction());
           dispatch(quizImportAction(dataToSend(QuizDataKen, 0)));
           dispatch(addTitle("Ken's Quiz"));
           dispatch(push("/ken"));
@@ -33,6 +34,7 @@ function Home() {
       </button>
       <button
         onClick={() => {
+          dispatch(resetStateAction());
           dispatch(quizImportAction(dataToSend(QuizDataRina, 0)));
           dispatch(addTitle("Rina's Quiz"));
           dispatch(push("/rina"));
