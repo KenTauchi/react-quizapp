@@ -29,6 +29,12 @@ const QuizDataKen = [
     option: ["Kenny", "Totty"],
     answer: "Kenny",
   },
+  {
+    id: 5,
+    question: "What is his hobby?",
+    option: ["Workout", "Trailing"],
+    answer: "Workout",
+  },
 ];
 
 export default QuizDataKen;
